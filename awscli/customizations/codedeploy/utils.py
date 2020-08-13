@@ -104,8 +104,7 @@ def validate_instance(params):
         distribution = awscli.compat.linux_distribution()[0]
         if 'Ubuntu' in distribution:
             params.system = Ubuntu(params)
-        if 'Red Hat Enterprise Linux Server' in distribution
-            or 'CentOS Linux' in distribution:
+        if 'Red Hat Enterprise Linux Server' in distribution or 'CentOS Linux' in distribution:
             params.system = RHEL(params)
     elif platform.system() == 'Windows':
         params.system = Windows(params)
